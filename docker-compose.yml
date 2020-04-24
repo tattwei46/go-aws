@@ -1,0 +1,14 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3'
+
+services:
+
+  # App Service
+  go-aws:
+    container_name: go-aws
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
